@@ -1,0 +1,23 @@
+WITH wk as (
+		INSERT INTO public."keys" (id)
+		VALUES ({{this.params.key}}::bigint)
+		ON CONFLICT (id) DO UPDATE SET last_modified = NOW()
+		RETURNING *),
+	wc as (
+		INSERT INTO public."contacts" (key_id)
+		VALUES ({{this.params.key}}::bigint)
+		ON CONFLICT (key_id) DO UPDATE SET last_modified = NOW()
+		RETURNING *),
+	wv as (
+		INSERT INTO public."visits" (key_id, contact_id, contact_uuid)
+		SELECT wk.id, wc.id, wc.uuid
+		FROM wc
+		INNER JOIN wk
+		ON wc.key_id=wk.id
+		RETURNING *)
+SELECT wv.key_id as "visit_key_id", wv.contact_id as "visit_contact_id", wv.contact_uuid as "visit_contact_uuid", wv.uuid as "visit_uuid", wv.id as "visit_id", wv.last_modified as "visit_last_modified", wv.created_at as "visit_created_at", jc.key_id as contact_key_id, jc.name as contact_name, jc.photo_url as contact_photo_url, jc.dob as contact_dob, jc.gender as contact_gender, jc.credits as contact_credits, jc.phone as contact_phone, jc.email as contact_email, jc.is_active as contact_is_active, jc.uuid as contact_uuid, jc.id as contact_id, jc.last_modified as contact_last_modified, jc.created_at as contact_created_at, jk.notes as key_notes, jk.is_active as key_is_active, jk.uuid as key_uuid, jk.id as key_id, jk.last_modified as key_last_modified, jk.created_at as key_created_at
+FROM wv
+INNER JOIN wc as jc
+ON jc.id=wv.contact_id
+INNER JOIN wk as jk
+ON jk.id=wv.key_id

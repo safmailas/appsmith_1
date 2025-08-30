@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "64679f54fa3cc350567e693a_64679f55fa3cc350567e698d",
+  "id": "Home_js_utils_image",
+  "unpublishedCollection": {
+    "name": "js_utils_image",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "photo_url_contacts_prefix",
+        "value": "`https://krgydosqxgwuxphfwybp.supabase.co/storage/v1/object/public/images/avatars/`"
+      }
+    ]
+  }
+}

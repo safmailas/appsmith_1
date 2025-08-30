@@ -1,0 +1,102 @@
+{
+  "alignment": "start",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 45.2,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButtonvyo311eirg.buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButtonvyo311eirg.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton9q0aph7rpr.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton91lhlbtj4d": {
+      "buttonColor": "#fde047",
+      "buttonType": "SIMPLE",
+      "id": "groupButton91lhlbtj4d",
+      "index": 2,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Close Out",
+      "menuItems": {},
+      "placement": "CENTER",
+      "widgetId": "ot27annn4r"
+    },
+    "groupButton9q0aph7rpr": {
+      "buttonColor": "#d4d4d8",
+      "buttonType": "SIMPLE",
+      "id": "groupButton9q0aph7rpr",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "View History",
+      "menuItems": {},
+      "onClick": "{{js_contact_reservations.get();}}",
+      "placement": "CENTER",
+      "widgetId": "wauanualll"
+    },
+    "groupButtonvyo311eirg": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "id": "groupButtonvyo311eirg",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Select Reservation",
+      "menuItems": {},
+      "onClick": "{{navigateTo('Home', {\n  \"key_id\": data_table.selectedRow.key_id,\n  \"manual_entry\": true\n}, 'SAME_WINDOW');}}",
+      "placement": "CENTER",
+      "widgetId": "7wyoaq28la"
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.bb8db4853027d74a78963c3375841e4b.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "0uu9ro80rg",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 43,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 39,
+  "orientation": "horizontal",
+  "parentColumnSpace": 16.890625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "topRow": 41.2,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "3uizx5m4xd",
+  "widgetName": "ButtonGroup1"
+}

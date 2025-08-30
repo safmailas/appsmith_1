@@ -1,0 +1,24 @@
+INSERT INTO public."contacts" as c (name, dob, gender, phone, email, is_active, credits, key_id, last_modified, photo_url) VALUES
+  ('{{ this.params.contact_name }}',
+	 '{{ this.params.contact_dob }}',
+	 '{{ this.params.contact_gender }}',
+	 {{ this.params.contact_phone }},
+	 {{ !!this.params.contact_email ? `'${this.params.contact_email}'` : null }},
+	 {{ this.params.contact_is_active }},
+	 '{{ this.params.contact_credits }}',
+	 {{ this.params.contact_key_id }},
+	 NOW(),
+	 '{{ this.params.contact_photo_url }}')
+ON CONFLICT (key_id) DO UPDATE SET
+	name = '{{this.params.contact_name}}',
+	dob = '{{this.params.contact_dob}}',
+	gender = '{{this.params.contact_gender}}',
+	phone = {{this.params.contact_phone}},
+	email = {{ !!this.params.contact_email ? `${this.params.contact_email}` : null }},
+	is_active = {{this.params.contact_is_active}},
+	credits = '{{this.params.contact_credits}}',
+	key_id = {{ this.params.contact_key_id }},
+	last_modified = NOW(),
+	photo_url = '{{this.params.contact_photo_url}}'
+WHERE c.key_id={{this.params.contact_key_id}}
+RETURNING id as "contact_id", uuid as "contact_uuid", photo_url as "contact_photo_url", name as "contact_name", credits as "contact_credits", dob as "contact_dob", gender as "contact_gender", phone as "contact_phone", email as "contact_email", is_active as "contact_is_active", last_modified as "contact_last_modified", key_id as "contact_key_id";

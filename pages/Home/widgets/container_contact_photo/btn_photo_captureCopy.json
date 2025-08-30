@@ -1,0 +1,71 @@
+{
+  "alignment": "center",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 70.80000000000001,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "displayName": "Button",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "flexVerticalAlignment": "end",
+  "hideCard": false,
+  "iconAlign": "left",
+  "iconName": "camera",
+  "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+  "isDefaultClickDisabled": true,
+  "isDeprecated": false,
+  "isDisabled": "{{false //(appsmith.store.photo == null && appsmith.store.keys_contacts.contact_key_id == input_key_rfid.inputText) ? false :(((!appsmith.store.is_pin_locked) && (appsmith.store.pin.includes(appsmith.store.input_pin )) && (input_key_rfid.isValid)) ? (appsmith.store.keys_contacts.key_id !== null) ? false : true : true ) }}",
+  "isLoading": false,
+  "isVisible": false,
+  "key": "rw7kuzqa1k",
+  "leftColumn": 26.080412371134017,
+  "minWidth": 120,
+  "mobileBottomRow": 86.4,
+  "mobileLeftColumn": 15.864902506963787,
+  "mobileRightColumn": 48.13509749303621,
+  "mobileTopRow": 82.4,
+  "onClick": "{{storeValue('show_widget_camera', appsmith.store.show_widget_camera == null || appsmith.store.show_widget_camera == false ? true : false);}}",
+  "originalBottomRow": 123,
+  "originalTopRow": 115,
+  "parentColumnSpace": 6.193448066711426,
+  "parentId": "jt2b9k0irf",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 37.91958762886598,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "text": "Show/Hide Camera",
+  "topRow": 66.80000000000001,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "yylhtaa5o0",
+  "widgetName": "btn_photo_captureCopy"
+}

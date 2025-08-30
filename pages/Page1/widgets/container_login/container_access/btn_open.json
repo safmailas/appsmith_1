@@ -1,0 +1,71 @@
+{
+  "alignment": "start",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 40.393750000000004,
+  "bottomRowBeforeCollapse": 28,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "displayName": "Button",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "flexVerticalAlignment": "end",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+  "isDefaultClickDisabled": true,
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{((!!input_shift.inputText) && (!!input_shift_date) && (!!input_user_profile.inputText) && (!!input_user_profile_password.inputText)) ? true : false}}",
+  "key": "s59at552hl",
+  "leftColumn": 0,
+  "minWidth": 120,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 3,
+  "onClick": "{{storeValue('user_access_status', !!appsmith.store.user_profiles.filter(row => row.username == input_user_profile.inputText && row.password == input_user_profile_password.inputText));}}",
+  "originalBottomRow": 28,
+  "originalTopRow": 21,
+  "parentColumnSpace": 5.59375,
+  "parentId": "yvdp4eo0ww",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 8.561872909698996,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "text": "Open",
+  "topRow": 36.393750000000004,
+  "topRowBeforeCollapse": 21,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "us7iuqp662",
+  "widgetName": "btn_open"
+}

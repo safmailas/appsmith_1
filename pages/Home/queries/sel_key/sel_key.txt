@@ -1,0 +1,6 @@
+SELECT 
+c.key_id as "contact_key_id", c.name as "contact_name", c.photo_url as "contact_photo_url", c.dob as "contact_dob", c.gender as "contact_gender", c.credits as "contact_credits", c.phone as "contact_phone", c.email as "contact_email", c.is_active as "contact_is_active", c.uuid as "contact_uuid", c.id as "contact_id", c.last_modified as "contact_last_modified", c.created_at as "contact_created_at", k.notes as "key_notes", k.is_active as "key_is_active", k.uuid as "key_uuid", k.id as "key_id", k.last_modified as "key_last_modified", k.created_at as "key_created_at"
+	FROM public."keys" as k
+JOIN public."contacts" as c
+	ON k."id" = c."key"
+WHERE k."id" = {{this.params.key_id ?? appsmith.store.keys_contacts.key_id}}::bigint;

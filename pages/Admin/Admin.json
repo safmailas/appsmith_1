@@ -1,0 +1,46 @@
+{
+  "gitSyncId": "652449ce5012274cbc5158f5_652449cf5012274cbc515900",
+  "unpublishedPage": {
+    "customSlug": "admin",
+    "isHidden": false,
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "none",
+          "bottomRow": 880,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "flexLayers": [
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "p282gm4nw3"
+                }
+              ]
+            }
+          ],
+          "leftColumn": 0,
+          "minHeight": 900,
+          "parentColumnSpace": 1,
+          "parentRowSpace": 1,
+          "positioning": "vertical",
+          "responsiveBehavior": "fill",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 78,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "useAutoLayout": true,
+          "version": 94,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "Admin",
+    "slug": "admin"
+  }
+}

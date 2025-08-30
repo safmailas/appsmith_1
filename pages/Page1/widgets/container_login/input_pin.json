@@ -1,0 +1,96 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 47.59375000000001,
+  "boxShadow": "none",
+  "defaultText": "",
+  "displayName": "Input",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "iconName"
+    },
+    {
+      "key": "resetOnSubmit"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "iconName"
+    },
+    {
+      "key": "resetOnSubmit"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSubmit"
+    }
+  ],
+  "flexVerticalAlignment": "end",
+  "hideCard": false,
+  "iconAlign": "left",
+  "iconName": "{{ (appsmith.store.is_pin_locked) ? \"lock\" : \"unlock\" }}",
+  "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+  "inputType": "PASSWORD",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": "{{!!appsmith.store.user_access_status && false}}",
+  "key": "bvduddvead",
+  "label": "",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextColor": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": "4",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 11,
+  "mobileLeftColumn": 20,
+  "mobileRightColumn": 40,
+  "mobileTopRow": 4,
+  "onSubmit": "{{storeValue('input_pin', input_pin.inputText).then(() => {}).catch(() => {});\nstoreValue('is_pin_locked', appsmith.store.pin.includes(input_pin.inputText) ? false : true);}}",
+  "originalBottomRow": 34,
+  "originalTopRow": 30,
+  "parentColumnSpace": 27.0628662109375,
+  "parentId": "qxegpoat3h",
+  "parentRowSpace": 10,
+  "placeholderText": "PIN...",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": "{{(appsmith.store.pin == input_pin.inputText) ? false : true }}",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "form",
+    "text input",
+    "number",
+    "textarea"
+  ],
+  "shouldScrollContents": true,
+  "showStepArrows": false,
+  "topRow": 43.59375000000001,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "bzj8r2us1w",
+  "widgetName": "input_pin"
+}

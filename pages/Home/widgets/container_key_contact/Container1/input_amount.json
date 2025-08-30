@@ -1,0 +1,84 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "allowCurrencyChange": false,
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 14.399999999999999,
+  "boxShadow": "none",
+  "decimals": 2,
+  "defaultCurrencyCode": "USD",
+  "defaultText": "0",
+  "displayName": "Currency Input",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "onSubmit"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSubmit"
+    }
+  ],
+  "hideCard": false,
+  "iconAlign": "left",
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.950aa351208d9d9b2a695b3881ec3779.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": "{{(treeselect_form_type.selectedOptionValue != \"MPB\") && (treeselect_form_type.selectedOptionValue != \"MBO\") //((radioFormType.selectedOptionValue != \"MPB\") && (radioFormType.selectedOptionValue != \"MPO\"))}}",
+  "key": "br7gy0f3ah",
+  "label": "Amount",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 23.6,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 17,
+  "onSubmit": "{{storeValue('amount', ( input_amount.text === \"0.00\" ? appsmith.store.amount : input_amount.text ));}}",
+  "parentColumnSpace": 6.828125,
+  "parentId": "5sasggkcmg",
+  "parentRowSpace": 10,
+  "placeholderText": "0.00",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "amount",
+    "total"
+  ],
+  "showStepArrows": false,
+  "tags": [
+    "Inputs"
+  ],
+  "topRow": 7.8,
+  "type": "CURRENCY_INPUT_WIDGET",
+  "version": 1,
+  "widgetId": "vib1bgx65w",
+  "widgetName": "input_amount"
+}

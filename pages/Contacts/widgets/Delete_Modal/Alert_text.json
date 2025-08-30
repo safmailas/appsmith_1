@@ -1,0 +1,37 @@
+{
+  "alignment": "start",
+  "borderRadius": "0px",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "dynamicBindingPathList": [],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "end",
+  "fontFamily": "System Default",
+  "fontSize": "1.5rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "overflow": "NONE",
+  "parentId": "zi8fjakv8o",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "text": "Delete Row",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "topRow": 0,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "35yoxo4oec",
+  "widgetName": "Alert_text"
+}

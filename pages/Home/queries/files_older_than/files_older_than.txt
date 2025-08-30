@@ -1,0 +1,4 @@
+SELECT v.name as filepath FROM storage."objects" v
+WHERE v.created_at < now()-'{{this.params.key ?? "7 days"}}'::interval
+AND v.name ilike {{`${this.params.folder ?? 'posts/%'}`}}
+ORDER BY v.created_at desc;

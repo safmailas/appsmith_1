@@ -1,0 +1,170 @@
+{
+  "alignment": "start",
+  "animateLoading": true,
+  "backgroundColor": "#FFFFFF",
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 74.10000000000002,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "children": [
+    {
+      "bottomRow": 687.0000000000002,
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "displayName": "Canvas",
+      "dynamicBindingPathList": [],
+      "flexLayers": [
+        {
+          "children": [
+            {
+              "align": "start",
+              "id": "6q3hzcqsi9"
+            },
+            {
+              "align": "start",
+              "id": "sn20sh6uro"
+            }
+          ]
+        },
+        {
+          "children": [
+            {
+              "align": "start",
+              "id": "9qrehvepuf"
+            }
+          ]
+        },
+        {
+          "children": [
+            {
+              "align": "center",
+              "id": "n4bfvoi1n5"
+            }
+          ]
+        },
+        {
+          "children": [
+            {
+              "align": "center",
+              "id": "k5tgvtmk82"
+            }
+          ]
+        },
+        {
+          "children": [
+            {
+              "align": "start",
+              "id": "uzi2ml35d3"
+            }
+          ]
+        },
+        {
+          "children": [
+            {
+              "align": "start",
+              "id": "aqrsjlkfdu"
+            }
+          ]
+        },
+        {
+          "children": [
+            {
+              "align": "start",
+              "id": "4irt2chr7o"
+            }
+          ]
+        },
+        {
+          "children": [
+            {
+              "align": "end",
+              "id": "krr59p6od7"
+            }
+          ]
+        }
+      ],
+      "hideCard": true,
+      "isDeprecated": false,
+      "isLoading": false,
+      "isVisible": true,
+      "key": "mroswpde5n",
+      "leftColumn": 0,
+      "minHeight": 500,
+      "minWidth": 450,
+      "mobileBottomRow": 744.984375,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 321.75,
+      "mobileTopRow": 0,
+      "parentColumnSpace": 1,
+      "parentId": "atn6bt8jlm",
+      "parentRowSpace": 1,
+      "positioning": "vertical",
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 321.75,
+      "topRow": 0,
+      "type": "CANVAS_WIDGET",
+      "useAutoLayout": true,
+      "version": 1,
+      "widgetId": "tjjj757jwi",
+      "widgetName": "Canvas18"
+    }
+  ],
+  "containerStyle": "card",
+  "displayName": "Container",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.1977dca3370505e2db3a8e44cfd54907.svg",
+  "isCanvas": true,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": "{{true //!!appsmith.store.photo && !!appsmith.store.show_reservations && !!appsmith.store.user_access_status && !!input_key_rfid.inputText && !!appsmith.store.keys_contacts.key_id && (sel_keys_contacts_ins_visits.responseMeta.isExecutionSuccess || upsert_keys_contacts_visits.responseMeta.isExecutionSuccess) }}",
+  "key": "ff1iojyna0",
+  "leftColumn": 32,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 10,
+  "minWidth": 450,
+  "mobileBottomRow": 121.29843749999999,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 46.8,
+  "originalBottomRow": 278,
+  "originalTopRow": 213,
+  "parentColumnSpace": 13.40625,
+  "parentId": "mqj14axnei",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "div",
+    "parent",
+    "group"
+  ],
+  "shouldScrollContents": true,
+  "topRow": 5.4,
+  "type": "CONTAINER_WIDGET",
+  "version": 1,
+  "widgetId": "atn6bt8jlm",
+  "widgetName": "container_reservations"
+}

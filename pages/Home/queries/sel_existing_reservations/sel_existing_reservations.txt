@@ -1,0 +1,5 @@
+SELECT "key_id", "key_uuid", "contact_id", "contact_uuid", "visit_id", "visit_uuid", "photo_url", "name", "status", "amount", "period", "date", "day", "start", "end", "space_id", "space_uuid", "type_id", "type_uuid", "user_profile_id", "user_profile_uuid" FROM public."reservations" 
+WHERE 
+"key_id" = {{this.params.key_id ?? appsmith.store.keys_contacts.key_id}}::bigint AND
+"date" ilike '{{shiftDatePicker.formattedDate}}' AND
+"period" ilike '{{radioShiftSelected.selectedOptionValue}}';

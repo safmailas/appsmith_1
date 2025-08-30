@@ -1,0 +1,65 @@
+{
+  "alignment": "start",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#eab308",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "displayName": "Button",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "flexVerticalAlignment": "end",
+  "hideCard": false,
+  "iconAlign": "left",
+  "iconName": "remove",
+  "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+  "isDefaultClickDisabled": true,
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "fjeereyhgz",
+  "leftColumn": 32.32989690721649,
+  "minWidth": 120,
+  "mobileBottomRow": 9.798437499999999,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 21.39275766016713,
+  "mobileTopRow": 5.7984374999999995,
+  "onClick": "{{js_utils_reset.refresh_app().then(() => {resetWidget(\"input_key_rfid\", false);});\n}}",
+  "originalBottomRow": 24,
+  "originalTopRow": 15,
+  "parentColumnSpace": 6.53125,
+  "parentId": "4crb5wj4wn",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 40.24742268041236,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "text": "",
+  "topRow": 0,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "6egqd5qaqo",
+  "widgetName": "btn_clear"
+}

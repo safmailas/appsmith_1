@@ -1,0 +1,202 @@
+{
+  "alignment": "start",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 9.2,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButton05uvyremzg.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton05uvyremzg.iconName"
+    },
+    {
+      "key": "groupButtons.groupButton1d8wnqugrt.iconName"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButtonffoxd010df.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1d8wnqugrt.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton5z0ddiezn7.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton05uvyremzg.iconName"
+    },
+    {
+      "key": "groupButtons.groupButton1d8wnqugrt.iconName"
+    },
+    {
+      "key": "groupButtons.groupButtonrfwzb54hdy.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton05uvyremzg.onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButtonffoxd010df.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonz4g4exr0zm.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1d8wnqugrt.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton5z0ddiezn7.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton05uvyremzg.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonrfwzb54hdy.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton05uvyremzg": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "{{false && ((!appsmith.store.is_pin_locked) && (appsmith.store.pin.includes(appsmith.store.input_pin )) && (input_key_rfid.isValid)) ? \"new-person\" : \"search\" }}",
+      "id": "groupButton05uvyremzg",
+      "index": 3,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Search",
+      "menuItems": {},
+      "onClick": "{{js_utils_rfid.get(inputArrayTable.selectedRow.scan, false && !appsmith.store.is_pin_locked && appsmith.store.pin.includes(appsmith.store.input_pin) && input_key_rfid.isValid ? \"upsert\" : \"select\");}}",
+      "placement": "CENTER",
+      "widgetId": "fzuh1h4hkv"
+    },
+    "groupButton1d8wnqugrt": {
+      "buttonColor": "#4ade80",
+      "buttonType": "SIMPLE",
+      "iconName": "{{true || ((!appsmith.store.is_pin_locked) && (appsmith.store.pin.includes(appsmith.store.input_pin )) && (input_key_rfid.isValid)) ? \"new-person\" : \"search\" }}",
+      "id": "groupButton1d8wnqugrt",
+      "index": 4,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Create",
+      "menuItems": {},
+      "onClick": "{{js_utils_rfid.get(inputArrayTable.selectedRow.scan, true || !appsmith.store.is_pin_locked && appsmith.store.pin.includes(appsmith.store.input_pin) && input_key_rfid.isValid ? \"upsert\" : \"select\");}}",
+      "placement": "CENTER",
+      "widgetId": "yu7avdktt2"
+    },
+    "groupButton5ifjtxs6wa": {
+      "buttonColor": "#18181b",
+      "buttonType": "MENU",
+      "iconName": "menu",
+      "id": "groupButton5ifjtxs6wa",
+      "index": 6,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Menu",
+      "menuItems": {},
+      "placement": "CENTER",
+      "widgetId": "oq96ugpa2n"
+    },
+    "groupButton5z0ddiezn7": {
+      "buttonColor": "#71717a",
+      "buttonType": "SIMPLE",
+      "iconName": "camera",
+      "id": "groupButton5z0ddiezn7",
+      "index": 5,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Camera",
+      "menuItems": {},
+      "onClick": "{{storeValue('show_widget_camera', appsmith.store.show_widget_camera == null || appsmith.store.show_widget_camera == false ? true : false);}}",
+      "placement": "CENTER",
+      "widgetId": "4ve7mdbf4f"
+    },
+    "groupButtonffoxd010df": {
+      "buttonColor": "#d4d4d8",
+      "buttonType": "SIMPLE",
+      "iconName": "person",
+      "id": "groupButtonffoxd010df",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Select",
+      "menuItems": {},
+      "onClick": "{{navigateTo('Contacts', {\n  \"period\": radioShiftSelected.selectedOptionValue,\n  \"date\": shiftDatePicker.formattedDate\n}, 'SAME_WINDOW');}}",
+      "placement": "CENTER",
+      "widgetId": "b93j9fepae"
+    },
+    "groupButtonrfwzb54hdy": {
+      "buttonColor": "#d8b4fe",
+      "buttonType": "SIMPLE",
+      "iconName": "annotation",
+      "id": "groupButtonrfwzb54hdy",
+      "index": 2,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Add",
+      "menuItems": {},
+      "onClick": "{{js_utils_input.handle_tbl();}}",
+      "placement": "CENTER",
+      "widgetId": "migo6c313e"
+    },
+    "groupButtonz4g4exr0zm": {
+      "buttonColor": "#eab308",
+      "buttonType": "SIMPLE",
+      "iconName": "remove",
+      "id": "groupButtonz4g4exr0zm",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Clear",
+      "menuItems": {},
+      "onClick": "{{js_utils_reset.refresh_app().then(() => {resetWidget(\"input_key_rfid\", false);});\n}}",
+      "placement": "CENTER",
+      "widgetId": "kvq51va4kp"
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.bb8db4853027d74a78963c3375841e4b.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "0uu9ro80rg",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 23.200000000000003,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 19.200000000000003,
+  "orientation": "horizontal",
+  "parentColumnSpace": 16.609375,
+  "parentId": "lx4y1q6zmc",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "topRow": 5.2,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "icldbgbq3c",
+  "widgetName": "btnGroupActions"
+}

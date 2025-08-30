@@ -1,0 +1,68 @@
+{
+  "alignment": "end",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 66.70000000000002,
+  "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+  "buttonColor": "#4ade80",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "displayName": "Button",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "flexVerticalAlignment": "end",
+  "hideCard": false,
+  "iconAlign": "left",
+  "iconName": "tick",
+  "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+  "isDefaultClickDisabled": true,
+  "isDeprecated": false,
+  "isDisabled": "{{!!appsmith.store.claim_exists || !appsmith.store.space_id || (typeof sel_existing_reservations.data != \"undefined\" && sel_existing_reservations.data != null && sel_existing_reservations.data.length != null && sel_existing_reservations.data.length > 0) }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "3aujeb1p94",
+  "leftColumn": 47.554603854389725,
+  "minWidth": 120,
+  "mobileBottomRow": 72.4984375,
+  "mobileLeftColumn": 41.47800586510264,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 68.4984375,
+  "onClick": "{{js_utils_reservation.upsert();}}",
+  "originalBottomRow": 56,
+  "originalTopRow": 48,
+  "parentColumnSpace": 13.09375,
+  "parentId": "tjjj757jwi",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "text": "Reserve",
+  "topRow": 62.70000000000002,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "krr59p6od7",
+  "widgetName": "btn_submit_reservation"
+}

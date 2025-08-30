@@ -1,0 +1,61 @@
+{
+  "alignment": "start",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 119.19375000000002,
+  "boxShadow": "none",
+  "displayName": "Camera",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onImageSave"
+    }
+  ],
+  "flexVerticalAlignment": "end",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.79c0d6de26a15bf464f2485130faa461.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isMirrored": true,
+  "isVisible": "{{false// && appsmith.store.show_camera_reservation==true ? true : false\n}}",
+  "key": "sozpvse3vg",
+  "leftColumn": 0,
+  "mobileBottomRow": 77,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 44,
+  "mobileWidthInPercentage": 0.9796875,
+  "mode": "CAMERA",
+  "onImageSave": "{{js_utils_image.upload_reservation(camera_reservation_photo.imageBlobURL, appsmith.store.keys_contacts.visit_uuid ?? js_utils_image.get_uuid());\nstoreValue('show_camera_reservation', false);\nstoreValue('photo_blob_reservation', camera_reservation_photo.imageBlobURL);}}",
+  "originalBottomRow": 104,
+  "originalTopRow": 44,
+  "parentColumnSpace": 13.09375,
+  "parentId": "qxegpoat3h",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "searchTags": [
+    "photo",
+    "video recorder"
+  ],
+  "topRow": 59.193750000000016,
+  "type": "CAMERA_WIDGET",
+  "version": 1,
+  "widgetId": "6nf8wrfi33",
+  "widgetName": "camera_reservation_photo",
+  "widthInPercentage": 0.9796875
+}

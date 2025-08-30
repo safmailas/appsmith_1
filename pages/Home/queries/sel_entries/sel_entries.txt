@@ -1,0 +1,32 @@
+view
+  public.entries as
+select
+  keys.created_at as key_created_at,
+  keys.id as rfid,
+  keys.is_active as key_is_active,
+  keys.last_modified as key_last_modified,
+  keys.notes as key_notes,
+  keys.uuid as key_uuid,
+  contacts.id,
+  contacts.created_at,
+  contacts.name,
+  contacts.dob,
+  contacts.gender,
+  contacts.phone,
+  contacts.email,
+  contacts.is_active,
+  contacts.credits,
+  contacts.last_modified,
+  contacts.photo_url,
+  contacts.uuid,
+  contacts.key_id,
+  visits.uuid as visit_uuid,
+  types.uuid as type_uuid,
+  reservations.uuid as reservations_uuid
+from
+  keys
+  full join contacts on keys.id = contacts.key_id
+  full join visits on keys.id = visits.key_id
+  and contacts.uuid = visits.contact_uuid
+  full join reservations on reservations.visit_uuid = visits.uuid
+  full join types on reservations.type_uuid = types.uuid;

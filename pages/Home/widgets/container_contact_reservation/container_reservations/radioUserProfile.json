@@ -1,0 +1,81 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "center",
+  "animateLoading": true,
+  "bottomRow": 30.8,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ appsmith.store.associate_last_selected ?? \"1\" }}",
+  "displayName": "Radio Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSelectionChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.99c101b3b70073f9c00e9af6523f9427.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isInline": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "al0pnmr65r",
+  "label": "Associate",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 15.554603854389722,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 38.198437500000004,
+  "mobileLeftColumn": 9.478005865102638,
+  "mobileRightColumn": 54.52199413489736,
+  "mobileTopRow": 31.198437500000004,
+  "onSelectionChange": "{{sel_user_profile.run({\n  'username': radioUserProfile.selectedOptionValue\n}).then(() => {\n  storeValue(\"associate_last_selected\", radioUserProfile.selectedOptionValue);\n});}}",
+  "options": [
+    {
+      "label": "1",
+      "value": "1"
+    },
+    {
+      "label": "2",
+      "value": "2"
+    },
+    {
+      "label": "3",
+      "value": "3"
+    },
+    {
+      "label": "4",
+      "value": "4"
+    }
+  ],
+  "parentColumnSpace": 8.0234375,
+  "parentId": "tjjj757jwi",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 48.445396145610275,
+  "searchTags": [
+    "choice"
+  ],
+  "tags": [
+    "Toggles"
+  ],
+  "topRow": 22.8,
+  "type": "RADIO_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "k5tgvtmk82",
+  "widgetName": "radioUserProfile",
+  "widthInPercentage": 0.2084831566994701
+}

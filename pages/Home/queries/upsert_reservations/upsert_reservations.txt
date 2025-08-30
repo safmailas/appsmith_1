@@ -1,0 +1,24 @@
+INSERT INTO public."reservations" ("key_id", "key_uuid", "contact_id", "contact_uuid", "visit_id", "visit_uuid", "photo_url", "name", "status", "amount", "period", "date", "day", "start", "end", "space_id", "space_uuid", "type_id", "type_uuid", "user_profile_id", "user_profile_uuid")
+		VALUES (
+{{this.params.key_id}}::bigint,
+{{this.params.key_uuid}},
+{{this.params.contact_id}},
+{{this.params.contact_uuid}},
+{{this.params.visit_id}},
+{{this.params.visit_uuid}},
+'{{this.params.photo_url}}',
+{{this.params.name}},
+{{this.params.status}},
+{{this.params.amount}},
+{{this.params.period}},
+'{{this.params.date}}',
+'{{this.params.day}}',
+'{{this.params.start}}',
+'{{this.params.end}}',
+{{this.params.space_id}},
+{{this.params.space_uuid}},
+{{this.params.type_id}},
+{{this.params.type_uuid}},
+{{this.params.user_profile_id}},
+{{this.params.user_profile_uuid}})
+RETURNING *;

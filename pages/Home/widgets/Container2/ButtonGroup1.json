@@ -1,0 +1,77 @@
+{
+  "alignment": "start",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButtonffoxd010df.onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButtonffoxd010df.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButtonffoxd010df": {
+      "buttonColor": "#d4d4d8",
+      "buttonType": "SIMPLE",
+      "iconName": "search",
+      "id": "groupButtonffoxd010df",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Select Contact",
+      "menuItems": {},
+      "onClick": "{{navigateTo('Contacts', {\n  \"period\": radioShiftSelected.selectedOptionValue,\n  \"date\": shiftDatePicker.formattedDate\n}, 'SAME_WINDOW');}}",
+      "placement": "CENTER",
+      "widgetId": "b93j9fepae"
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.bb8db4853027d74a78963c3375841e4b.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "0uu9ro80rg",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 4.9984375,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 0,
+  "orientation": "horizontal",
+  "parentColumnSpace": 16.609375,
+  "parentId": "4crb5wj4wn",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 32.32989690721649,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "topRow": 0,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "hapovicba8",
+  "widgetName": "ButtonGroup1"
+}

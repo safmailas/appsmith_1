@@ -1,0 +1,144 @@
+{
+  "alignment": "start",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 57.99375000000001,
+  "boxShadow": "none",
+  "buttonVariant": "SECONDARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton3.isVisible"
+    },
+    {
+      "key": "groupButtons.groupButton2.isVisible"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton3.isVisible"
+    },
+    {
+      "key": "groupButtons.groupButton2.isVisible"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonasc5j9qw7x.onClick"
+    }
+  ],
+  "flexVerticalAlignment": "end",
+  "groupButtons": {
+    "groupButton2": {
+      "buttonColor": "#3b82f6",
+      "buttonType": "SIMPLE",
+      "iconName": "add",
+      "id": "groupButton2",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": "{{!appsmith.store.user_access_status}}",
+      "label": "Login",
+      "menuItems": {},
+      "onClick": "{{storeValue('user_access_status', !!appsmith.store.user_profiles.filter(row => row.username == input_user_profile.inputText && row.password == input_user_profile_password.inputText));}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton3": {
+      "buttonColor": "#52525b",
+      "buttonType": "SIMPLE",
+      "iconName": "delete",
+      "id": "groupButton3",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": "{{!!appsmith.store.user_access_status}}",
+      "label": "Logout",
+      "menuItems": {
+        "menuItem1": {
+          "backgroundColor": "#FFFFFF",
+          "id": "menuItem1",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "First Option",
+          "onClick": "",
+          "widgetId": ""
+        }
+      },
+      "onClick": "{{storeValue('user_access_status', null);\nresetWidget(\"input_shift\", false);\nresetWidget(\"input_shift_date\", false);\nresetWidget(\"input_user_profile\", false);\nresetWidget(\"input_user_profile_password\", false);}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButtonasc5j9qw7x": {
+      "buttonColor": "#52525b",
+      "buttonType": "SIMPLE",
+      "iconName": "document",
+      "id": "groupButtonasc5j9qw7x",
+      "index": 2,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Clear",
+      "menuItems": {},
+      "onClick": "{{js_utils_reset.refresh_app();}}",
+      "placement": "CENTER",
+      "widgetId": "4ymgkcs21v"
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.d6773218cfb61dcfa5f460d43371e30d.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isDisabled": "{{((!!input_shift.inputText) && (!!input_shift_date) && (!!input_user_profile.inputText) && (!!input_user_profile_password.inputText)) ? false : true}}",
+  "isLoading": false,
+  "isVisible": "{{false && (!!appsmith.store.user_access_status && input_key_rfid.isValid && !!input_key_rfid.inputText && !appsmith.store.keys_contacts.key_id && sel_keys_contacts_ins_visits.responseMeta.isExecutionSuccess) && (appsmith.store.is_pin_locked === false) && appsmith.store.pin.includes(appsmith.store.input_pin) }}",
+  "key": "r7picvcyve",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 25,
+  "mobileLeftColumn": 18,
+  "mobileRightColumn": 42,
+  "mobileTopRow": 21,
+  "orientation": "horizontal",
+  "originalBottomRow": 43,
+  "originalTopRow": 38,
+  "parentColumnSpace": 27.0628662109375,
+  "parentId": "qxegpoat3h",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "topRow": 53.99375000000001,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "d6onv7rkcm",
+  "widgetName": "btns_user_access"
+}

@@ -1,0 +1,105 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "center",
+  "animateLoading": true,
+  "bottomRow": 8,
+  "boxShadow": "none",
+  "defaultOptionValue": "1",
+  "displayName": "Radio Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSelectionChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.99c101b3b70073f9c00e9af6523f9427.svg",
+  "isDeprecated": false,
+  "isDisabled": "{{ false//appsmith.store.keys_contacts.contact_name != \"Manager\" }}",
+  "isInline": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": false,
+  "key": "i1s3i2xmgo",
+  "label": "Form Type",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 15.5,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 10.7421875,
+  "mobileLeftColumn": 4.67492260061919,
+  "mobileRightColumn": 59.32507739938081,
+  "mobileTopRow": 0,
+  "onSelectionChange": "{{storeValue('type_id', radioFormType.selectedOptionValue);}}",
+  "options": [
+    {
+      "label": "MPB",
+      "value": "1"
+    },
+    {
+      "label": "MPO",
+      "value": "2"
+    },
+    {
+      "label": "EXP",
+      "value": "3"
+    },
+    {
+      "label": "MTR",
+      "value": "4"
+    },
+    {
+      "label": "OPN",
+      "value": "5"
+    },
+    {
+      "label": "END",
+      "value": "6"
+    },
+    {
+      "label": "PUL",
+      "value": "7"
+    },
+    {
+      "label": "TRN",
+      "value": "8"
+    },
+    {
+      "label": "MGR",
+      "value": "9"
+    }
+  ],
+  "parentColumnSpace": 19.1875,
+  "parentId": "bx829n12h9",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 48.5,
+  "searchTags": [
+    "choice"
+  ],
+  "tags": [
+    "Toggles"
+  ],
+  "topRow": 0,
+  "type": "RADIO_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "7dvj07jzj7",
+  "widgetName": "radioFormType",
+  "widthInPercentage": 0.4877709838799333
+}

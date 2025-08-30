@@ -1,0 +1,90 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 38.6,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( appsmith.store.space_category ?? \"All\"))(selection_space_category.options, selection_space_category.serverSideFiltering) }}",
+  "displayName": "Select",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    },
+    {
+      "key": "onDropdownClose"
+    }
+  ],
+  "flexVerticalAlignment": "end",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+  "isDeprecated": false,
+  "isDisabled": "{{false //!( !!appsmith.store.show_reservations && !!appsmith.store.user_access_status && !!input_key_rfid.inputText && !!appsmith.store.keys_contacts.key_id && (sel_keys_contacts_ins_visits.responseMeta.isExecutionSuccess || upsert_keys_contacts_visits.responseMeta.isExecutionSuccess) ) //!!appsmith.store.photo &&}}",
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "eadzpimxay",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Category:",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 45.5984375,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 38.9984375,
+  "onDropdownClose": "{{js_utils_reservation.filter_spaces();}}",
+  "onOptionChange": "",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 20,
+  "originalTopRow": 13,
+  "parentColumnSpace": 13.09375,
+  "parentId": "tjjj757jwi",
+  "parentRowSpace": 10,
+  "placeholderText": "Select a category...",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "dropdown"
+  ],
+  "serverSideFiltering": false,
+  "sourceData": "{{ [\n\t{ \"label\": \"All\", \n \"value\": \"All\"}, ...[...new Set(sel_spaces.data.slice().map(record=>record.category))].map(sel => (\t{ \"label\": sel, \"value\": sel } ))] }}",
+  "topRow": 32,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "uzi2ml35d3",
+  "widgetName": "selection_space_category"
+}

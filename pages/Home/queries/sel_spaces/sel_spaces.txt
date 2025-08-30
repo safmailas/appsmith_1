@@ -1,0 +1,4 @@
+Select id, uuid, name, number, category
+From public."spaces"
+Where is_active=true
+Order by name;

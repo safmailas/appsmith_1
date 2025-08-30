@@ -1,0 +1,273 @@
+{
+  "alignment": "start",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 61.500000000000014,
+  "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "groupButtons.groupButton1.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton2.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonjxogu4lxdd.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton2dl356xdes.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtone04one46xd.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton2dl356xdes.isVisible"
+    },
+    {
+      "key": "groupButtons.groupButtone04one46xd.isVisible"
+    },
+    {
+      "key": "groupButtons.groupButtone04one46xd.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton2dl356xdes.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButtonjxogu4lxdd.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton2.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton1.isDisabled"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButtone04one46xd.iconName"
+    },
+    {
+      "key": "groupButtons.groupButton2dl356xdes.iconName"
+    },
+    {
+      "key": "groupButtons.groupButtonjxogu4lxdd.iconName"
+    },
+    {
+      "key": "groupButtons.groupButton2.iconName"
+    },
+    {
+      "key": "groupButtons.groupButton1.iconName"
+    },
+    {
+      "key": "groupButtons.groupButtonz94q63dj21.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonz94q63dj21.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButtonz94q63dj21.isVisible"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButton2dl356xdes.isVisible"
+    },
+    {
+      "key": "groupButtons.groupButtone04one46xd.isVisible"
+    },
+    {
+      "key": "groupButtons.groupButtone04one46xd.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton2dl356xdes.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButtonjxogu4lxdd.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton2.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton1.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButtone04one46xd.iconName"
+    },
+    {
+      "key": "groupButtons.groupButton2dl356xdes.iconName"
+    },
+    {
+      "key": "groupButtons.groupButtonjxogu4lxdd.iconName"
+    },
+    {
+      "key": "groupButtons.groupButton2.iconName"
+    },
+    {
+      "key": "groupButtons.groupButton1.iconName"
+    },
+    {
+      "key": "groupButtons.groupButtonz94q63dj21.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButtonz94q63dj21.isVisible"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton2dl356xdes.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtone04one46xd.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonjxogu4lxdd.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonz94q63dj21.onClick"
+    }
+  ],
+  "flexVerticalAlignment": "end",
+  "groupButtons": {
+    "groupButton1": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "{{(appsmith.store.amount == \"0\") ? \"tick-circle\" : \"\" }}",
+      "id": "groupButton1",
+      "index": 0,
+      "isDisabled": "{{appsmith.store.amount == \"0\"}}",
+      "isVisible": true,
+      "label": "0",
+      "menuItems": {},
+      "onClick": "{{storeValue('amount', '0')}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton2": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "{{(appsmith.store.amount == \"10\") ? \"tick-circle\" : \"\" }}",
+      "id": "groupButton2",
+      "index": 2,
+      "isDisabled": "{{appsmith.store.amount == \"10\"}}",
+      "isVisible": true,
+      "label": "10",
+      "menuItems": {},
+      "onClick": "{{storeValue('amount', '10')}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton2dl356xdes": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "{{(appsmith.store.amount == \"40\") ? \"tick-circle\" : \"\" }}",
+      "id": "groupButton2dl356xdes",
+      "index": 4,
+      "isDisabled": "{{appsmith.store.amount == \"40\"}}",
+      "isVisible": "{{(appsmith.store.keys_contacts.contact_credits == \"40\") || ((appsmith.store.keys_contacts.contact_credits == \"100\"))}}",
+      "label": "40",
+      "menuItems": {},
+      "onClick": "{{storeValue('amount', '40');}}",
+      "placement": "CENTER",
+      "widgetId": "s9cyy46wao"
+    },
+    "groupButtone04one46xd": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "{{(appsmith.store.amount == \"100\") ? \"tick-circle\" : \"\" }}",
+      "id": "groupButtone04one46xd",
+      "index": 5,
+      "isDisabled": "{{appsmith.store.amount == \"100\"}}",
+      "isVisible": "{{appsmith.store.keys_contacts.contact_credits == \"100\"}}",
+      "label": "100",
+      "menuItems": {},
+      "onClick": "{{storeValue('amount', '100');}}",
+      "placement": "CENTER",
+      "widgetId": "er17sex60w"
+    },
+    "groupButtonjxogu4lxdd": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "{{(appsmith.store.amount == \"20\") ? \"tick-circle\" : \"\" }}",
+      "id": "groupButtonjxogu4lxdd",
+      "index": 3,
+      "isDisabled": "{{appsmith.store.amount == \"20\"}}",
+      "isVisible": true,
+      "label": "20",
+      "menuItems": {},
+      "onClick": "{{storeValue('amount', '20')}}",
+      "placement": "CENTER",
+      "widgetId": "nssv27wojz"
+    },
+    "groupButtonz94q63dj21": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "id": "groupButtonz94q63dj21",
+      "index": 1,
+      "isDisabled": "{{appsmith.store.keys_contacts.amount == \"5\"}}",
+      "isVisible": "{{true //selection_space_category.selectedOptionLabel == \"FIRELINK\"}}",
+      "label": "5",
+      "menuItems": {},
+      "onClick": "{{storeValue('amount', '5')}}",
+      "placement": "CENTER",
+      "widgetId": "4ofu3q1jxw"
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.d6773218cfb61dcfa5f460d43371e30d.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isDisabled": "{{false //!( !!appsmith.store.show_reservations && !!appsmith.store.user_access_status && !!input_key_rfid.inputText && !!appsmith.store.keys_contacts.key_id && (sel_keys_contacts_ins_visits.responseMeta.isExecutionSuccess || upsert_keys_contacts_visits.responseMeta.isExecutionSuccess) ) //!!appsmith.store.photo &&}}",
+  "isLoading": false,
+  "isVisible": "{{(treeselect_form_type.selectedOptionValue == \"MPB\") ||(treeselect_form_type.selectedOptionValue == \"MBO\") }}",
+  "key": "r4z9avy13f",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 67.6984375,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 53.7984375,
+  "orientation": "vertical",
+  "originalBottomRow": 41,
+  "originalTopRow": 33,
+  "parentColumnSpace": 13.09375,
+  "parentId": "tjjj757jwi",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "topRow": 47.60000000000001,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "4irt2chr7o",
+  "widgetName": "btns_amount"
+}

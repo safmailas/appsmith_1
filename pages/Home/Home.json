@@ -1,0 +1,112 @@
+{
+  "gitSyncId": "652449ce5012274cbc5158f5_652449cf5012274cbc5158fc",
+  "unpublishedPage": {
+    "customSlug": "home",
+    "isHidden": false,
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "none",
+          "bottomRow": 4621,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "flexLayers": [
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "l0vkun7de1"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "xvqnh06epn"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "nou0pfgm3a"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "xw63gkexd8"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "center",
+                  "id": "3j8ae5yjl7"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "38hs26ysq8"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "bp2owcczy2"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "ldtvldfmdk"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "k6r8diumco"
+                }
+              ]
+            }
+          ],
+          "leftColumn": 0,
+          "minHeight": 3630,
+          "mobileBottomRow": 4542.390625,
+          "mobileTopRow": 0,
+          "parentColumnSpace": 1,
+          "parentRowSpace": 1,
+          "positioning": "vertical",
+          "responsiveBehavior": "fill",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 103,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "useAutoLayout": true,
+          "version": 94,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "Home",
+    "slug": "home"
+  }
+}

@@ -1,0 +1,47 @@
+select
+  reservations.created_at as reserved_at,
+  contacts.photo_url as contact_photo_url,
+  contacts.name as contact_name,
+  contacts.dob as contact_dob,
+  contacts.gender as contact_gender,
+  contacts.phone as contact_phone,
+  contacts.email as contact_email,
+  contacts.is_active as contact_is_active,
+  contacts.id as contact_id,
+  contacts.created_at as contact_created_at,
+  contacts.credits as contact_credits,
+  contacts.last_modified as contact_last_modified,
+  contacts.uuid as contact_uuid,
+  contacts.key_id as contact_key_id,
+  keys.created_at as key_created_at,
+  keys.id as rfid,
+  keys.is_active as key_is_active,
+  keys.last_modified as key_last_modified,
+  keys.notes as key_notes,
+  keys.uuid as key_uuid,
+  visits.uuid as visit_uuid,
+  visits.created_at as visit_created_at,
+  reservations.uuid as reservations_uuid,
+  reservations.status as status_of_reservation,
+  reservations.date as date_of_period,
+  reservations.day as day_of_period,
+  reservations.start as start_of_period,
+  reservations.end as end_of_period,
+  spaces.number as space_number,
+  spaces.category as space_category,
+  spaces.name as space_name,
+  spaces.uuid as space_uuid
+  -- types.uuid as type_uuid,
+from
+  keys
+  full join contacts on keys.id = contacts.key_id
+  full join visits on keys.id = visits.key_id
+  and contacts.uuid = visits.contact_uuid
+  full join reservations on reservations.visit_uuid = visits.uuid
+  full join spaces on spaces.uuid = reservations.space_uuid
+  -- full join types on reservations.type_uuid = types.uuid
+WHERE reservations.created_at is not null
+ORDER BY reservations.created_at desc;
+--    CASE WHEN LEN(reservations.created_at) > 0 THEN CONVERT(DateTime, reservations.created_at,101)
+--       ELSE null
+--    END DESC

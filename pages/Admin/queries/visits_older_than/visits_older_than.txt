@@ -1,0 +1,4 @@
+SELECT v.uuid as filename FROM public."visits" v
+JOIN public."contacts" c ON v.contact_uuid = c.uuid
+WHERE v.created_at < now()-'{{this.params.key}}'::interval
+ORDER BY v.created_at desc;

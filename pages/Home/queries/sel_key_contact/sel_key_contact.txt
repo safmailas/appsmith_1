@@ -1,0 +1,9 @@
+SELECT * 
+	FROM public."keys" k
+JOIN public."contacts" c 
+	ON k."id" = c."key_id"
+FULL JOIN public."reservations" r ON c."id" = r."contact_id"
+JOIN public."types" t ON r."type_id" = t."id"
+WHERE
+k."id" = {{this.params.key ?? appsmith.store.keys_contacts.key_id}}::bigint
+ORDER BY c.name;

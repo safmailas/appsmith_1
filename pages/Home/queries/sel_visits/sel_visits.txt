@@ -1,0 +1,3 @@
+SELECT * FROM public."visits" v
+JOIN public."contacts" c ON v.contact_uuid = c.uuid
+ORDER BY v.created_at desc;

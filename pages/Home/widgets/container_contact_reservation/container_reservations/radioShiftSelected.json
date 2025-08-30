@@ -1,0 +1,81 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "center",
+  "animateLoading": true,
+  "bottomRow": 21.6,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ appsmith.store.shift_last_selected ?? \"1\" }}",
+  "displayName": "Radio Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onSelectionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSelectionChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.99c101b3b70073f9c00e9af6523f9427.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isInline": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "al0pnmr65r",
+  "label": "Shift",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 15.554603854389722,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 30.398437500000004,
+  "mobileLeftColumn": 7.145631067961162,
+  "mobileRightColumn": 56.85436893203884,
+  "mobileTopRow": 23.398437500000004,
+  "onSelectionChange": "{{storeValue('shift_last_selected', radioShiftSelected.selectedOptionValue);\nsel_existing_reservations.run({\n//  \"key_id\": appsmith.store.rfid,\n}).then(() => {const response = sel_existing_reservations.data;if (typeof response != \"undefined\" && response != null && response.length != null && response.length > 0) { showAlert(`A claim for contact with keyfob ${appsmith.store.keys_contacts.key_id} for the current time period already exists.`); storeValue(\"claim_exists\",true);storeValue(\"show_reservations\", false);} else {storeValue(\"claim_exists\",false);storeValue(\"show_reservations\", true);};});}}",
+  "options": [
+    {
+      "label": "1",
+      "value": "1"
+    },
+    {
+      "label": "2",
+      "value": "2"
+    },
+    {
+      "label": "3",
+      "value": "3"
+    }
+  ],
+  "parentColumnSpace": 8.0234375,
+  "parentId": "tjjj757jwi",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 48.445396145610275,
+  "searchTags": [
+    "choice"
+  ],
+  "tags": [
+    "Toggles"
+  ],
+  "topRow": 14.600000000000001,
+  "type": "RADIO_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "n4bfvoi1n5",
+  "widgetName": "radioShiftSelected",
+  "widthInPercentage": 0.0884125344352617
+}

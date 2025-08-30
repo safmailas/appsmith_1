@@ -1,0 +1,56 @@
+select
+  contacts.photo_url as contact_photo_url,
+  contacts.name as contact_name,
+  contacts.dob as contact_dob,
+  contacts.gender as contact_gender,
+  contacts.phone as contact_phone,
+  contacts.email as contact_email,
+  contacts.is_active as contact_is_active,
+  contacts.id as contact_id,
+  contacts.created_at as contact_created_at,
+  contacts.credits as contact_credits,
+  contacts.last_modified as contact_last_modified,
+  contacts.uuid as contact_uuid,
+  contacts.key_id as contact_key_id,
+ -- keys.created_at as key_created_at,
+ -- keys.id as rfid,
+ -- keys.is_active as key_is_active,
+ -- keys.last_modified as key_last_modified,
+ -- keys.notes as key_notes,
+ -- keys.uuid as key_uuid,
+--  visits.uuid as visit_uuid,
+ -- visits.created_at as visit_created_at,
+  reservations.amount as amount,
+  reservations.uuid as uuid,
+  reservations.created_at as created_at,
+	reservations.last_modified as last_modified,
+  reservations.status as status,
+	reservations.period as reservation_period,
+  reservations.date as date_of_period,
+  reservations.day as day_of_period,
+  reservations.start as start_of_period,
+  reservations.end as end_of_period,
+	reservations.type_id as type_id,
+	reservations.user_profile_id as user_profile_id,
+  spaces.number as space_number,
+  spaces.category as space_category,
+  spaces.name as space_name,
+  spaces.uuid as space_uuid
+from
+  reservations
+  inner join contacts  on reservations.contact_uuid = contacts.uuid
+  inner join visits    on reservations.visit_uuid = visits.uuid
+  inner join spaces    on reservations.space_id = spaces.id
+
+  -- left join keys      on reservations.key_id = contacts.key_id
+  -- full join contacts on keys.id = contacts.key_id
+  -- full join visits on keys.id = visits.key_id
+  -- and contacts.uuid = visits.contact_uuid
+  -- full join reservations on reservations.visit_uuid = visits.uuid
+  -- full join spaces on spaces.uuid = reservations.space_uuid
+  -- full join types on reservations.type_uuid = types.uuid
+order by
+  case
+    when reservations.created_at is not null then reservations.created_at
+    else null
+  end desc

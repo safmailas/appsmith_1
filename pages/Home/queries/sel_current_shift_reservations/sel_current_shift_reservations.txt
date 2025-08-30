@@ -1,0 +1,11 @@
+SELECT "key_id", "key_uuid", "contact_id", "contact_uuid", "visit_id", "visit_uuid", "photo_url", "name", "status", "amount", "period", "date", "day", "start", "end", "space_id", "space_uuid", "type_id", "type_uuid", "user_profile_id", "user_profile_uuid" 
+FROM public."reservations" 
+	WHERE NOT EXISTS (
+	SELECT "key_id", "key_uuid", "contact_id", "contact_uuid", "visit_id", "visit_uuid", "photo_url", "name", "status", "amount", "period", "date", "day", "start", "end", "space_id", "space_uuid", "type_id", "type_uuid", "user_profile_id", "user_profile_uuid" 
+	FROM public."reservations" 
+	WHERE 
+	"date" = '{{this.params.date}}' AND
+	"day" = '{{this.params.day}}' AND
+	"start" = '{{this.params.start}}' AND
+	"end" = '{{this.params.end}}'
+);

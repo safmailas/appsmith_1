@@ -1,0 +1,5 @@
+update contacts
+set
+  key_id = {{input_key_rfid.text}};
+where
+  id = {{appsmith.store.keys_contacts.contact_id}};

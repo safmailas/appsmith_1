@@ -1,0 +1,63 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "allowClear": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "defaultOptionValue": "MPB",
+  "displayName": "TreeSelect",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "expandAll": false,
+  "hideCard": false,
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a7b19dc8b31d68fcff57f1d2c0084a18.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": false,
+  "key": "afe4cotdyl",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 32,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 15.1984375,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 11.1984375,
+  "options": "[  \n{\n    \"label\": \"Machine\",\n    \"value\": \"MAC\",\n    \"children\": [\t\n\t\t\t{\n        \"label\": \"Match Playback\",\n        \"value\": \"MPB\"\n      },\n\t\t\t{\n        \"label\": \"Match Payout\",\n        \"value\": \"MPY\"\n      },\n\t\t\t{\n        \"label\": \"Match Bonus\",\n        \"value\": \"MBO\"\n      },\n\t\t\t{\n        \"label\": \"Meter Points In\",\n        \"value\": \"MPI\"\n      },\n\t\t\t{\n        \"label\": \"Meter Points Out\",\n        \"value\": \"MPO\"\n      }\n    ]\n\t},\n  {\n    \"label\": \"Expense\",\n    \"value\": \"EXP\",\n    \"children\": [\n      {\n        \"label\": \"Employee Pay\",\n        \"value\": \"EMP\"\n      },\n      {\n        \"label\": \"Loan\",\n        \"value\": \"LOA\"\n      },\n      {\n        \"label\": \"Food\",\n        \"value\": \"FOO\"\n      },\n      {\n        \"label\": \"Other\",\n        \"value\": \"OTH\"\n      }\t\t\t\n    ]\n  },\n  {\n    \"label\": \"Till\",\n    \"value\": \"TIL\",\n    \"children\": [\n      {\n        \"label\": \"Open\",\n        \"value\": \"OPN\"\n      },\n      {\n        \"label\": \"Pull\",\n        \"value\": \"PUL\"\n      },\n      {\n        \"label\": \"Transfer\",\n        \"value\": \"TRN\"\n      },\n\t\t\t{\n        \"label\": \"Deposit\",\n        \"value\": \"DEP\"\n      },\n\t\t\t{\n        \"label\": \"End\",\n        \"value\": \"END\"\n      }\n    ]\n  }\n]",
+  "parentColumnSpace": 6.828125,
+  "parentId": "tjjj757jwi",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option..",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "dropdown",
+    "singleselecttree"
+  ],
+  "tags": [
+    "Select"
+  ],
+  "topRow": 0,
+  "type": "SINGLE_SELECT_TREE_WIDGET",
+  "version": 1,
+  "widgetId": "sn20sh6uro",
+  "widgetName": "treeselect_form_type"
+}

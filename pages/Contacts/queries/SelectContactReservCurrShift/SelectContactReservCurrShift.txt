@@ -1,0 +1,5 @@
+SELECT "photo_url", "contact_id", "amount", "space_id", "period", "date", "day", "created_at", "key_id" FROM public."reservations" 
+WHERE 
+"key_id" = {{ data_table.selectedRow.key_id }}::bigint AND
+"date" ilike '{{ appsmith.URL.queryParams.date ?? moment().format("LL") }}'; 
+/*AND "period" ilike '{{ appsmith.URL.queryParams.period ?? "1" }}'; */

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6517057a37d1e872dda9935f_65170ce237d1e872dda9945c",
+  "id": "Contacts_js_scan_to_keyfob",
+  "unpublishedCollection": {
+    "name": "js_scan_to_keyfob",
+    "pageId": "Contacts",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

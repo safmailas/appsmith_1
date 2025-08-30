@@ -1,0 +1,87 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 19.596875000000004,
+  "boxShadow": "none",
+  "closeOnSelection": true,
+  "dateFormat": "LLL",
+  "datePickerType": "DATE_PICKER",
+  "defaultDate": "{{moment().format(\"YYYY-MM-DDTHH:mm:ss\")}}",
+  "displayName": "DatePicker",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "maxDate"
+    },
+    {
+      "key": "minDate"
+    },
+    {
+      "key": "defaultDate"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "maxDate"
+    },
+    {
+      "key": "minDate"
+    },
+    {
+      "key": "defaultDate"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "firstDayOfWeek": "0",
+  "flexVerticalAlignment": "end",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.300e5ab8e2e1c26c7a0bad06116842b7.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "1r9fduw91u",
+  "label": "Date/Time:",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelTextSize": "0.875rem",
+  "labelWidth": "15",
+  "leftColumn": 0,
+  "maxDate": "{{moment().format(\"YYYY-MM-DDTHH:mm:ss\")}}",
+  "maxDynamicHeight": 9000,
+  "minDate": "{{moment().format(\"YYYY-MM-DDT00:00:00.000\")}}",
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 17,
+  "mobileRightColumn": 37,
+  "mobileTopRow": 8,
+  "originalBottomRow": 12,
+  "originalTopRow": 8,
+  "parentColumnSpace": 5.902996063232422,
+  "parentId": "yvdp4eo0ww",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "calendar"
+  ],
+  "shortcuts": false,
+  "shouldScrollContents": true,
+  "timePrecision": "minute",
+  "topRow": 12.998437500000001,
+  "type": "DATE_PICKER_WIDGET2",
+  "version": 2,
+  "widgetId": "cq76p5mrg2",
+  "widgetName": "input_shift_date"
+}

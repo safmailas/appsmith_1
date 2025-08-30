@@ -1,0 +1,6 @@
+SELECT
+  *
+FROM
+  public.types
+WHERE
+  "id" ilike '%{{radioFormType.selectedOptionValue}}%'
