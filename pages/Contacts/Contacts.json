@@ -24,6 +24,14 @@
             {
               "children": [
                 {
+                  "align": "center",
+                  "id": "bnrcontacts0001"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
                   "align": "start",
                   "id": "3uizx5m4xd"
                 }

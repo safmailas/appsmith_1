@@ -1,0 +1,39 @@
+{
+  "alignment": "center",
+  "borderRadius": "0px",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "dynamicBindingPathList": [
+    { "key": "fontFamily" },
+    { "key": "isVisible" }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    { "key": "fontSize" }
+  ],
+  "flexVerticalAlignment": "end",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": "{{appsmith.store.demo_mode}}",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "overflow": "NONE",
+  "parentColumnSpace": 1,
+  "parentId": "0",
+  "parentRowSpace": 1,
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "text": "Demo Mode: Backend disabled",
+  "textAlign": "CENTER",
+  "textColor": "#D1293D",
+  "topRow": 0,
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "bnrcontacts0001",
+  "widgetName": "banner_demo_mode"
+}

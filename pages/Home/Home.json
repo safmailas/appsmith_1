@@ -24,6 +24,14 @@
             {
               "children": [
                 {
+                  "align": "center",
+                  "id": "bnrhome0001"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
                   "align": "start",
                   "id": "xvqnh06epn"
                 }
