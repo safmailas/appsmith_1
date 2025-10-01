@@ -2,6 +2,11 @@ export default {
 	get: async () => {
 		const time_period = await js_utils_datetime.getTimePeriod();
 
+		// Demo-mode or missing credentials: return empty data safely
+		if (appsmith.store.demo_mode || !appsmith.store.supabaseUrl || !appsmith.store.supabaseKey) {
+			return [];
+		}
+
 		let sb = new supabase.SupabaseClient(appsmith.store.supabaseUrl,appsmith.store.supabaseKey).from('reservations').select('*');
 
 		if (appsmith.store.keys_contacts.contact_uuid) { sb = sb.eq('contact_uuid', appsmith.store.keys_contacts.contact_uuid) }

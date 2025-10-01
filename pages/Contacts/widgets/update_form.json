@@ -575,7 +575,7 @@
           "labelTextSize": "0.875rem",
           "originalIdentifier": "photo_url",
           "position": 10,
-          "sourceData": "https://krgydosqxgwuxphfwybp.supabase.co/storage/v1/object/public/images/avatars/7952f71a-1f7a-41cf-9be9-0722e98c924a.png"
+          "sourceData": "https://placehold.co/91x91?text=Avatar"
         },
         "type": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",

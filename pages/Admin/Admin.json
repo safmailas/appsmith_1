@@ -21,6 +21,14 @@
                 }
               ]
             }
+            ,{
+              "children": [
+                {
+                  "align": "center",
+                  "id": "bnradmin0001"
+                }
+              ]
+            }
           ],
           "leftColumn": 0,
           "minHeight": 900,
