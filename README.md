@@ -28,3 +28,17 @@ If you want to connect your own Supabase project:
 2. Ensure the expected tables, buckets and policies exist (e.g., `reservations`, storage bucket `images` with `avatars/` and `posts/` folders).
 
 With these values present, the app will automatically use live Supabase operations.
+
+### Runtime toggle (no secrets committed)
+Use the helper to toggle at runtime:
+
+```js
+// Enable with your values
+js_utils_supabase_toggle.enable('https://YOUR-PROJECT.supabase.co', 'YOUR-ANON-PUBLIC-KEY')
+
+// Disable / back to demo
+js_utils_supabase_toggle.disable()
+
+// Check status
+js_utils_supabase_toggle.status()
+```
