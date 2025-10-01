@@ -42,3 +42,16 @@ js_utils_supabase_toggle.disable()
 // Check status
 js_utils_supabase_toggle.status()
 ```
+
+### Local Supabase (optional)
+Follow the Supabase guide to restore a downloaded backup locally: [Restoring a downloaded backup locally](https://supabase.com/docs/guides/local-development/restoring-downloaded-backup).
+
+Helper scripts included:
+- `scripts/supabase-local-start.sh` — starts the local stack
+- `scripts/supabase-local-restore-backup.sh /path/to/db_cluster.backup 15.6.1.115` — restores a backup locally per the guide
+- `scripts/supabase-local-psql.sh` — opens `psql` to `postgresql://postgres:postgres@localhost:54322/postgres`
+
+Once running locally, you can point the app to your local REST with:
+```js
+js_utils_supabase_toggle.enable('http://localhost:54321','anon-or-service-role-key')
+```
