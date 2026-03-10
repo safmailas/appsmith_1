@@ -1,3 +1,17 @@
+appsmith_1
+This project is a visitor management application built on Appsmith, primarily focused on RFID keyfob scanning for quick visitor lookup and reservation booking. It allows users to manage visitor contact profiles, handle space reservations, upload photos for identification, and provides mechanisms for application state reset and user authentication. The application interacts with a PostgreSQL database for persistent data storage, all orchestrated through a dynamic UI component layer.
+
+
+## Sections
+- Database Interaction (SQL Queries)
+- UI Component Layer (Widgets)
+- Global Application State (Appsmith Store)
+- RFID and Visitor Flow Management (js_utils_rfid)
+- Reservation Booking Logic (js_utils_reservation)
+- Contact Data Management (js_utils_contact)
+- Image Upload and Retrieval (js_utils_image)
+- Application Reset and Initialization (js_utils_reset)
+
 ## You can visit this application for yourself! 
 #### Click "View Application" to demo.
 # [![](https://assets.appsmith.com/git-sync/Buttons.svg) ](https://app.appsmith.com/applications/652449ce5012274cbc5158f5/pages/652449cf5012274cbc5158fe) 
