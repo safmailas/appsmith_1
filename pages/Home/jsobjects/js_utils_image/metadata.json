@@ -9,7 +9,7 @@
     "variables": [
       {
         "name": "photo_url_contacts_prefix",
-        "value": "`https://krgydosqxgwuxphfwybp.supabase.co/storage/v1/object/public/images/avatars/`"
+        "value": "appsmith.store.photo_url_contacts_prefix ?? `https://placehold.co/91x91?text=Avatar`"
       }
     ]
   }

@@ -1,23 +1,33 @@
 export default {
-	photo_url_contacts_prefix: `https://krgydosqxgwuxphfwybp.supabase.co/storage/v1/object/public/images/avatars/`,
-	
+	photo_url_contacts_prefix: appsmith.store.photo_url_contacts_prefix ?? `https://placehold.co/91x91?text=Avatar`,
+
 	upload: async(base64String, fileName) => {
 		const filePath = `${fileName}.png`;
 		console.log(`File Path: ${filePath}`);
 		console.log(`Base64String: ${base64String}`);
-		
+
 		await storeValue("file_name", fileName);
 		await storeValue('show_widget_camera', false);
 		await storeValue('photo_blob', camera_contact_photo_url.imageBlobURL);
-		
+
 		// Convert base-64 string to Blob object
 		const blob = await fetch(base64String).then(res => res.blob())
 		// Create File object from Blob
 		const file = new File([blob], filePath, { type: blob.type })
+		// Demo-mode: short-circuit without network
+		if (appsmith.store.demo_mode || !appsmith.store.supabaseUrl || !appsmith.store.supabaseKey) {
+			await storeValue("upload_photo", `avatars/${filePath}`);
+			await removeValue("photo");
+			await resetWidget("image_contact_photo_url");
+			await storeValue("photo_url", appsmith.store.photo_default);
+			await js_utils_contact.upsert();
+			return appsmith.store.photo_url;
+		}
+
 		// Upload file to Supabase storage bucket
-		const supabaseUrl = 'https://krgydosqxgwuxphfwybp.supabase.co';
-		const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtyZ3lkb3NxeGd3dXhwaGZ3eWJwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIzNjM5MTYsImV4cCI6MTk5NzkzOTkxNn0.fZ242ifnSjydD8NZ7IwnLEH7ghaMSfR-DILwADa9yYM';
-		
+		const supabaseUrl = appsmith.store.supabaseUrl;
+		const supabaseKey = appsmith.store.supabaseKey;
+
 		let upload_response = await new supabase.SupabaseClient(supabaseUrl, supabaseKey)
 			.storage
 			.from('images')
@@ -26,7 +36,7 @@ export default {
 				cacheControl: 'no-store',
 				upsert: true
 			})
-		
+
 		// Handle upload response
 		if (upload_response.error) {
 			console.log(await upload_response.error);
@@ -36,27 +46,35 @@ export default {
 			await storeValue("upload_photo", await upload_response.data.path);
 			await removeValue("photo");
 			await resetWidget("image_contact_photo_url");
-			
+
 			await storeValue("photo_url", await js_utils_image.retrieve(fileName));
 			await js_utils_contact.upsert();
-			
+
 			return appsmith.store.photo_url;
 //			await storeValue("photo", await js_utils_image.retrieve.run(()=>{download(js_utils_image.retrieve.data)}));
 		}
 	},
-	
+
 	upload_reservation: async(base64String, fileName) => {
 		const filePath = `${fileName}.png`;
 		console.log(`File Path: ${filePath}`);
 		console.log(`Base64String: ${base64String}`);
 		const camera_reservation_photo = appsmith.store.photo_url_reservation ?? appsmith.store.photo_url;
-		const supabaseUrl = 'https://krgydosqxgwuxphfwybp.supabase.co';
-		const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtyZ3lkb3NxeGd3dXhwaGZ3eWJwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIzNjM5MTYsImV4cCI6MTk5NzkzOTkxNn0.fZ242ifnSjydD8NZ7IwnLEH7ghaMSfR-DILwADa9yYM';
-		
+		// Demo-mode: short-circuit without network
+		if (appsmith.store.demo_mode || !appsmith.store.supabaseUrl || !appsmith.store.supabaseKey) {
+			await storeValue("upload_photo_reservation", `posts/${filePath}`);
+			await removeValue("photo_reservation");
+			await resetWidget("image_reservation_photo");
+			await storeValue("photo_url_reservation", appsmith.store.photo_default);
+			return appsmith.store.upload_photo_reservation;
+		}
+		const supabaseUrl = appsmith.store.supabaseUrl;
+		const supabaseKey = appsmith.store.supabaseKey;
+
 		await storeValue("file_name_reservation", fileName);
 		await storeValue('show_camera_reservation', false);
 		await storeValue('photo_blob_reservation', camera_reservation_photo.imageBlobURL);
-		
+
 		// Convert base-64 string to Blob object
 		const blob = await fetch(base64String).then(res => res.blob())
 		// Create File object from Blob
@@ -70,7 +88,7 @@ export default {
 				cacheControl: 'no-store',
 				upsert: true
 			})
-		
+
 		// Handle upload response
 		if (upload_response.error) {
 			console.log(await upload_response.error);
@@ -81,40 +99,36 @@ export default {
 			await removeValue("photo_reservation");
 			await resetWidget("image_reservation_photo");
 			await storeValue("photo_url_reservation", await js_utils_image.retrieve_reservation(fileName));
-			
+
 			return appsmith.store.upload_photo_reservation;
 		}
 
 	},
-	
+
 	retrieve_reservation: async(fileName) => {
-		const supabaseUrl = 'https://krgydosqxgwuxphfwybp.supabase.co';
-		const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtyZ3lkb3NxeGd3dXhwaGZ3eWJwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIzNjM5MTYsImV4cCI6MTk5NzkzOTkxNn0.fZ242ifnSjydD8NZ7IwnLEH7ghaMSfR-DILwADa9yYM';
 		fileName = fileName ?? appsmith.store.keys_contacts.visit_uuid;
-		let retrieve_response = new supabase.SupabaseClient(supabaseUrl,supabaseKey);
 		let photo = null;
-		if (!!fileName) {
+		if (!!fileName && !appsmith.store.demo_mode && appsmith.store.supabaseUrl && appsmith.store.supabaseKey) {
 			const filePath = `${fileName}.png` ?? `${appsmith.store.keys_contacts.visit_uuid}.png`;
-			const rsp = await retrieve_response.storage.from('images/posts').getPublicUrl(filePath); 
-			await storeValue("retrieve_response_reservation", { 'name': rsp.data.publicUrl }, false); // null,  ...rsp.data.slice().shift()}); // ?? rsp2.data.slice().shift())});  // ...rsp.data.slice().shift()});
+			let retrieve_response = new supabase.SupabaseClient(appsmith.store.supabaseUrl, appsmith.store.supabaseKey);
+			const rsp = await retrieve_response.storage.from('images/posts').getPublicUrl(filePath);
+			await storeValue("retrieve_response_reservation", { 'name': rsp.data.publicUrl }, false);
 			photo = await rsp.data.publicUrl ?? appsmith.store.retrieve_response_reservation.name;
 		}
-	
-		await storeValue("photo_reservation", (!!photo) ? `${photo}` : null, false); //${appsmith.store.photo_url_reservations_prefix}`${photo}`
+
+		await storeValue("photo_reservation", (!!photo) ? `${photo}` : null, false);
 		return appsmith.store.photo_reservation;
-	},		
-	
+	},
+
 	retrieve: async(fileName) => {
-		const supabaseUrl = 'https://krgydosqxgwuxphfwybp.supabase.co';
-		const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtyZ3lkb3NxeGd3dXhwaGZ3eWJwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIzNjM5MTYsImV4cCI6MTk5NzkzOTkxNn0.fZ242ifnSjydD8NZ7IwnLEH7ghaMSfR-DILwADa9yYM';
 		fileName = fileName ?? appsmith.store.keys_contacts.contact_uuid;
-		let retrieve_response = new supabase.SupabaseClient(supabaseUrl,supabaseKey);
 		let photo = null;
-		
-		if (!!fileName) {
+
+		if (!!fileName && !appsmith.store.demo_mode && appsmith.store.supabaseUrl && appsmith.store.supabaseKey) {
 			const filePath = `${fileName}.png` ?? `${appsmith.store.keys_contacts.contact_uuid}.png`;
-			const rsp = await retrieve_response.storage.from('images/avatars').getPublicUrl(filePath); 
-			await storeValue("retrieve_response", { 'name': rsp.data.publicUrl }, false);	
+			let retrieve_response = new supabase.SupabaseClient(appsmith.store.supabaseUrl, appsmith.store.supabaseKey);
+			const rsp = await retrieve_response.storage.from('images/avatars').getPublicUrl(filePath);
+			await storeValue("retrieve_response", { 'name': rsp.data.publicUrl }, false);
 			photo = String(await rsp.data.publicUrl ?? appsmith.store.retrieve_response.name);
 		}
 		await storeValue("photo", (!!photo) ? (photo.includes(js_utils_image.photo_url_contacts_prefix) ? `${photo}` : null): null, false);
